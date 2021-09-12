@@ -40,9 +40,38 @@ def inputArray():
 # print(countPos(inputArray()))
 
 #3 - Sum total
-def sumTotal(arr):
-    sum = 0
-    for i in arr:
-        sum+=i 
-    return sum 
-print(sumTotal(inputArray()))
+# def sumTotal(arr):
+#     sum = 0
+#     for i in arr:
+#         sum+=i 
+#     return sum 
+# print(sumTotal(inputArray()))
+
+#4 - Average
+# def avg(arr):
+#     sum = 0
+#     for i in range(len(arr)):
+#         sum += arr[i]
+#     return sum/(len(arr))
+# print(avg(inputArray()))
+
+#5 - Length
+# def length(arr):
+#     ct = 0
+#     for i in arr:
+#         ct+=1
+#     return ct
+# print(length(inputArray()))
+
+#6 - Minimum
+def minim(arr):
+    newMin = 0
+    if not arr:
+        print("Empty list")
+    else:
+        newMin = arr[0]
+        for i in arr:
+            if i < newMin:
+                newMin = i
+    return newMin
+print(minim(inputArray()))
