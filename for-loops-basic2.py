@@ -40,27 +40,27 @@ def inputArray():
 # print(countPos(inputArray()))
 
 #3 - Sum total
-# def sumTotal(arr):
-#     sum = 0
-#     for i in arr:
-#         sum+=i 
-#     return sum 
+def sumTotal(arr):
+    sum = 0
+    for i in arr:
+        sum+=i 
+    return sum 
 # print(sumTotal(inputArray()))
 
 #4 - Average
-# def avg(arr):
-#     sum = 0
-#     for i in range(len(arr)):
-#         sum += arr[i]
-#     return sum/(len(arr))
+def avg(arr):
+    sum = 0
+    for i in range(len(arr)):
+        sum += arr[i]
+    return sum/(len(arr))
 # print(avg(inputArray()))
 
 #5 - Length
-# def length(arr):
-#     ct = 0
-#     for i in arr:
-#         ct+=1
-#     return ct
+def length(arr):
+    ct = 0
+    for i in arr:
+        ct+=1
+    return ct
 # print(length(inputArray()))
 
 #6 - Minimum
@@ -74,4 +74,34 @@ def minim(arr):
             if i < newMin:
                 newMin = i
     return newMin
-print(minim(inputArray()))
+# print(minim(inputArray()))
+
+#7 - Maximum
+def maxim(arr):
+    newMax = 0
+    if not arr:
+        print("Empty List")
+    else:
+        newMax = arr[0]
+        for i in arr:
+            if i > newMax:
+                newMax = i
+    return newMax
+# print(maxim(inputArray()))
+
+#8 - Ultimate analysis
+def ultAnalysis(arr):
+    analyzedArr = {'sumTotal':sumTotal(arr), 'average':avg(arr), 'minimum':minim(arr), 'maximum':maxim(arr), 'length':length(arr)}
+    return analyzedArr
+# print(ultAnalysis(inputArray()))
+
+#9 - Reverse list
+#no distinction made re: even vs odd lists given that "int(...)" rounds DOWN
+def reverseList(arr):
+    temp = 0
+    for i in range(int(len(arr)/2)):
+        temp = arr[i]
+        arr[i] = arr[len(arr) - (i+1)]
+        arr[len(arr) - (i+1)] = temp
+    return arr
+print(reverseList(inputArray()))
